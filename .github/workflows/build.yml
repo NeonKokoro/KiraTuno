@@ -331,7 +331,7 @@ jobs:
 
       - name: Build YouSlider
         run: |
-          cd YouShare
+          cd YouSlider
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/youslider.deb
           
