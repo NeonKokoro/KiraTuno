@@ -16,7 +16,7 @@ on:
 
       display_name:
         description: "App Name (Optional)"
-        default: "YouTube"
+        default: "YouTube (KiraTuno)"
         required: true
         type: string
 
@@ -195,6 +195,12 @@ jobs:
         
       - name: Clone YTFlags
         run: git clone --quiet --depth=1 https://github.com/Tonwalter888/YTFlags.git
+
+      - name: Clone YouSpeed
+        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouSpeed.git
+
+      - name: Clone YouSlider
+        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouSlider.git
         
       - name: Build YouPiP
         run: |
@@ -316,6 +322,18 @@ jobs:
           cd YTFlags
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytflags.deb
+
+      - name: Build YouSpeed
+        run: |
+          cd YouSpeed
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/youspeed.deb
+
+      - name: Build YouSlider
+        run: |
+          cd YouShare
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/youslider.deb
           
       - name: Inject Tweaks Into IPA
         run: |
