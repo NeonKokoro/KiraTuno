@@ -6,6 +6,8 @@ If you have any problems, feel free to open issues!
 - [YTLite](https://github.com/dayanch96/YTLite) - eg. Download Videos,No ads,Background Playback
 - [YouMute](https://github.com/PoomSmart/YouMute) - Mute the video sounds in video overlay
 - YTIcons - View all the YouTube app icons
+- YouSlider (it's back!!) - Change the YouTube slider setting
+- YouSpeed (it's back!!) - Present in the video overlay setting, lets you change the speed quicker
 - [YTABConfig](https://github.com/PoomSmart/YTABConfig) - Configures A/B settings
 - NoYTPremium - Removes all the app startup YouTube Premium promotion popups
 - [YouChooseQuality](https://github.com/PoomSmart/YouChooseQuality) - Auto select the video quality from your scenario
