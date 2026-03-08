@@ -220,6 +220,12 @@ jobs:
       - name: Clone iSponsorBlock
         run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/iSponsorBlock.git
 
+      - name: Clone YTHoldForSpeed
+        run: git clone --quiet --depth=1 https://github.com/aricloverEXTRA/YTHoldForSpeed-Sideloaded.git
+
+      - name: Clone YouTimeStamp
+        run: git clone --quiet --depth=1 https://github.com/aricloverEXTRA/YouTimeStamp.git
+
       - name: Build YouPiP
         run: |
           cd YouPiP
@@ -352,6 +358,60 @@ jobs:
           cd YouSlider
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/youslider.deb
+
+      - name: Build YTSilentVote
+        run: |
+          cd YTSilentVote
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ytnovote.deb  
+
+      - name: Build YTABGoodies
+        run: |
+          cd YTABGoodies
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ytabgoodies.deb
+          
+      - name: Build YTMiniplayerEnabler
+        run: |
+          cd YTMiniplayerEnabler
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ytminiplayerenabler.deb
+
+      - name: Build LowContrastMode
+        run: |
+          cd LowContrastMode
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/lowcontrastmode.deb
+
+      - name: Build YTNoShorts
+        run: |
+          cd YTNoShorts
+          make clean package DEBUG=0 FINALPACKAGE=1 ROOTLESS=1
+          mv packages/*.deb ${{ github.workspace }}/ytweaks.deb
+
+      - name: Build BigYTMiniPlayer
+        run: |
+          cd BigYTMiniPlayer
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/bigytminiplayer.deb
+
+      - name: Build iSponsorBlock
+        run: |
+          cd iSponsorBlock
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/isponsorblock.deb
+
+      - name: Build YTHoldForSpeed
+        run: |
+          cd YTHoldForSpeed
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ytholdforspeed.deb
+
+      - name: Build YouTimeStamp
+        run: |
+          cd YouTimeStamp
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/youtimestamp.deb
           
       - name: Inject Tweaks Into IPA
         run: |
