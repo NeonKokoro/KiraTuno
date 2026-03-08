@@ -208,12 +208,6 @@ jobs:
       - name: Clone YTNoShorts
         run: git clone --quiet --depth=1 https://github.com/MiRO92/YTNoShorts.git
 
-      - name: Clone YTHoldForSpeed
-        run: git clone --quiet --depth=1 https://github.com/aricloverEXTRA/YTHoldForSpeed-Sideloaded.git
-
-      - name: Clone YouTimeStamp
-        run: git clone --quiet --depth=1 https://github.com/aricloverEXTRA/YouTimeStamp.git
-
       - name: Build YouPiP
         run: |
           cd YouPiP
@@ -363,19 +357,7 @@ jobs:
         run: |
           cd YTNoShorts
           make clean package DEBUG=0 FINALPACKAGE=1 ROOTLESS=1
-          mv packages/*.deb ${{ github.workspace }}/ytweaks.deb
-
-      - name: Build YTHoldForSpeed
-        run: |
-          cd YTHoldForSpeed
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ytholdforspeed.deb
-
-      - name: Build YouTimeStamp
-        run: |
-          cd YouTimeStamp
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youtimestamp.deb
+          mv packages/*.deb ${{ github.workspace }}/
           
       - name: Inject Tweaks Into IPA
         run: |
