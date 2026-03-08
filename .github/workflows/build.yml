@@ -208,9 +208,6 @@ jobs:
       - name: Clone YTNoShorts
         run: git clone --quiet --depth=1 https://github.com/MiRO92/YTNoShorts.git
 
-      - name: Clone BigYTMiniPlayer
-        run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/BigYTMiniPlayer.git
-
       - name: Clone iSponsorBlock
         run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/iSponsorBlock.git
 
@@ -370,12 +367,6 @@ jobs:
           cd YTNoShorts
           make clean package DEBUG=0 FINALPACKAGE=1 ROOTLESS=1
           mv packages/*.deb ${{ github.workspace }}/ytweaks.deb
-
-      - name: Build BigYTMiniPlayer
-        run: |
-          cd BigYTMiniPlayer
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/bigytminiplayer.deb
 
       - name: Build iSponsorBlock
         run: |
