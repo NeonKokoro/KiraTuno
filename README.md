@@ -1,10 +1,6 @@
-# YTLitePlusEXTRA
-This is a fork repo from YTLite,but add more tweaks similar to YTLitePlus for who can't build IPA or The app is unusable.
+# KiraTubo
+This is a fork repo from YTLitePlusEXTRA, but with wayyyyyy more tweaks and ingredients cooked in.
 If you have any problems, feel free to open issues!
-
-**EDIT:** THANKS FOR 200 FORKS!🥳🎉🙏
-
-**NOTE:** Before you open a new issue, please check in [FAQs](FAQs.md) first and make sure your issue doesn't have in it.
 
 ## Main features
 - [YTLite](https://github.com/dayanch96/YTLite) - eg. Download Videos,No ads,Background Playback
