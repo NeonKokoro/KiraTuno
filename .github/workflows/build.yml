@@ -208,9 +208,6 @@ jobs:
       - name: Clone YTNoShorts
         run: git clone --quiet --depth=1 https://github.com/MiRO92/YTNoShorts.git
 
-      - name: Clone iSponsorBlock
-        run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/iSponsorBlock.git
-
       - name: Clone YTHoldForSpeed
         run: git clone --quiet --depth=1 https://github.com/aricloverEXTRA/YTHoldForSpeed-Sideloaded.git
 
