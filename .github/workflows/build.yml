@@ -144,8 +144,8 @@ jobs:
       - name: Clone Return-YouTube-Dislikes
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/Return-YouTube-Dislikes.git
 
-      - name: Clone YouGroupSettings
-        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouGroupSettings.git
+      - name: Clone YTGroupSettings
+        run: git clone --quiet --depth=1 https://github.com/NeonKokoro/YTGroupSettings.git
            
       - name: Clone YTVideoOverlay
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTVideoOverlay.git
@@ -238,11 +238,11 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ryd.deb
 
-      - name: Build YouGroupSettings
+      - name: Build YTGroupSettings
         run: |
-          cd YouGroupSettings
+          cd YTGroupSettings
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ygs.deb
+          mv packages/*.deb ${{ github.workspace }}/ytgs.deb
 
       - name: Build YTVideoOverlay
         run: |
