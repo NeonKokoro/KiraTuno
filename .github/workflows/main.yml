@@ -2,12 +2,6 @@ name: Build YouProEXTRA IPA
 on:
   workflow_dispatch:
     inputs:
-      ipa_url:
-        description: "Direct URL to YouPro IPA"
-        default: "https://files.catbox.moe/z12fwl.ipa"
-        required: true
-        type: string
-
       display_name:
         description: "App Name (Optional)"
         default: "YouTube"
@@ -57,7 +51,7 @@ jobs:
           
       - name: Download and Validate IPA
         run: |
-          wget "${{ inputs.ipa_url }}" --quiet --no-verbose -O youtube.ipa
+          wget "https://github.com/jaydenjcpy/2026src/releases/download/202604221947YP/202604221947YP.ipa" --quiet --no-verbose -O youtube.ipa
 
           file_type=$(file --mime-type -b youtube.ipa)
 
