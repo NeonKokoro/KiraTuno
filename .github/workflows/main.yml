@@ -80,7 +80,7 @@ jobs:
         run: |
           git clone --quiet --depth=1 -n --filter=tree:0 https://github.com/aricloverEXTRA/sdks.git
           cd sdks
-          git sparse-checkout set --no-cone iPhoneOS18.6.sdk
+          git sparse-checkout set --no-cone iPhoneOS16.5.sdk
           git checkout
           mv *.sdk $THEOS/sdks
 
@@ -169,7 +169,7 @@ jobs:
       - name: Clone IAmYouTube
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/IAmYouTube.git
 
-      - name: Clone SponsorBlock (soon?)
+      - name: Clone iSponsorBlock
         run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/iSponsorBlock.git
 
       - name: Clone YTNoHoverCards
@@ -327,7 +327,13 @@ jobs:
           cd YouTube-X
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytx.deb
-
+      
+      - name: Build iSponsorBlock
+        run: |
+          cd iSponsorBlock
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/isponsorblock.deb
+          
       - name: Build YTShortsProgress
         run: |
           cd YTShortsProgress
