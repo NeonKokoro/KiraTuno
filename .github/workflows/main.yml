@@ -169,14 +169,14 @@ jobs:
       - name: Clone IAmYouTube
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/IAmYouTube.git
 
-      - name: Clone iSponsorBlock
+      - name: Clone SponsorBlock (soon?)
         run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/iSponsorBlock.git
 
       - name: Clone YTNoHoverCards
         run: git clone --quiet --depth=1 https://github.com/level3tjg/YTNoHoverCards.git
         
-      - name: Clone YTHoldForSpeed
-        run: git clone --quiet --depth=1 https://github.com/joshuaseltzer/YTHoldForSpeed.git
+      - name: Clone YouTube-X
+        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouTube-X.git
         
       - name: Clone YTShortsProgress
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTShortsProgress.git
@@ -322,17 +322,11 @@ jobs:
       #     make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless ARCHS=arm64
       #     mv packages/*.deb ${{ github.workspace }}/volboostyt.deb
 
-      - name: Build iSponsorBlock
+      - name: Build YouTube-X
         run: |
-          cd iSponsorBlock
+          cd YouTube-X
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/isponsorblock.deb
-
-      - name: Build YTHoldForSpeed
-        run: |
-          cd YTHoldForSpeed
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ythfs.deb
+          mv packages/*.deb ${{ github.workspace }}/ytx.deb
 
       - name: Build YTShortsProgress
         run: |
@@ -346,7 +340,7 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytnhc.deb
 
-      - name: Build YTNoHoverCards
+      - name: Build NoYTPremium
         run: |
           cd NoYTPremium
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
