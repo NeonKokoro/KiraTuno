@@ -169,6 +169,21 @@ jobs:
       - name: Clone IAmYouTube
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/IAmYouTube.git
 
+      - name: Clone iSponsorBlock
+        run: git clone --quiet --depth=1 https://github.com/Galactic-Dev/iSponsorBlock.git
+
+      - name: Clone YTNoHoverCards
+        run: git clone --quiet --depth=1 https://github.com/level3tjg/YTNoHoverCards.git
+        
+      - name: Clone YTHoldForSpeed
+        run: git clone --quiet --depth=1 https://github.com/joshuaseltzer/YTHoldForSpeed.git
+        
+      - name: Clone YTShortsProgress
+        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTShortsProgress.git
+
+      - name: Clone NoYTPremium
+        run: git clone --quiet --depth=1 https://github.com/PoomSmart/NoYTPremium.git
+        
       - name: Clone YTVideoErrorAlert
         if: ${{ inputs.ytvid }}
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTVideoErrorAlert.git
@@ -293,7 +308,6 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytflags.deb
           
-
       - name: Build YTVideoErrorAlert
         if: ${{ inputs.ytvid }}
         run: |
@@ -307,6 +321,36 @@ jobs:
       #     cd VolumeBoostYT
       #     make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless ARCHS=arm64
       #     mv packages/*.deb ${{ github.workspace }}/volboostyt.deb
+
+      - name: Build iSponsorBlock
+        run: |
+          cd iSponsorBlock
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/isponsorblock.deb
+
+      - name: Build YTHoldForSpeed
+        run: |
+          cd YTHoldForSpeed
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ythfs.deb
+
+      - name: Build YTShortsProgress
+        run: |
+          cd YTShortsProgress
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ytsp.deb
+
+      - name: Build YTNoHoverCards
+        run: |
+          cd YTNoHoverCards
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/ytnhc.deb
+
+      - name: Build YTNoHoverCards
+        run: |
+          cd NoYTPremium
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/noytpremium.deb
           
       - name: Inject Tweaks Into IPA
         run: |
