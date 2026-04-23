@@ -334,12 +334,6 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytsp.deb
 
-      - name: Build YTNoHoverCards
-        run: |
-          cd YTNoHoverCards
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ytnhc.deb
-
       - name: Build NoYTPremium
         run: |
           cd NoYTPremium
