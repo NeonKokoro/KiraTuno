@@ -1,10 +1,12 @@
-# YouProEXTRA
+# KiraTuno (NEW)
 
-Based on the *FREE* YouPro tweak made by [Alibusut](https://t.me/alibusut)
+Hello and welcome!! KiraTuno is back! I am starting a new chapter for KiraTuno with YouPro. Hope you enjoy this and new things down the pipeline soon. I am working on improving the iOS SDK downloading thing so more tweaks can come. And also this tweak was made by [Alibusut](https://t.me/alibusut)
+
+Download it at https://reddit.com/r/KiraTuno
 
 Added extra features just like YTLitePlusEXTRA but for completely free
 
-# Features Included But Not Limited To...
+# Features included but not limited to...
 
 - [YouPro](https://t.me/ipastar/105) - eg. Download Videos, No ads, Background Playback
 - [YouMute](https://github.com/PoomSmart/YouMute) - Mute the video sounds in video overlay
