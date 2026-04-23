@@ -36,6 +36,7 @@ jobs:
     runs-on: macos-latest
     permissions:
       contents: write
+
     steps:
       - name: Hide Sensitive Inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
