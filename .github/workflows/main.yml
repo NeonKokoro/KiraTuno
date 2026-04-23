@@ -80,7 +80,7 @@ jobs:
         run: |
           git clone --quiet --depth=1 -n --filter=tree:0 https://github.com/aricloverEXTRA/sdks.git
           cd sdks
-          git sparse-checkout set --no-cone iPhoneOS18.6.sdk
+          git sparse-checkout set --no-cone iPhoneOS16.5.sdk
           git checkout
           mv *.sdk $THEOS/sdks
 
